@@ -12,7 +12,7 @@ nav {
   width: 100%;
   position: fixed;
 }
-#nav-ul {
+.nav-ul {
   display: flex;
   flex: 1;
   gap: 25px;
@@ -375,19 +375,50 @@ address {
   margin-right: 20px;
 }
 
+.nav-linje {
+  display: none;
+}
+
+@media screen and (max-width: 840px) {
+  .nav-ul {
+    gap: 14px;
+  }
+
+  header p {
+    max-width: 47%;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  #nav-ul {
+  .nav-ul {
     text-align: center;
     position: absolute;
     border-radius: 0px 0px 10px 0px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     opacity: 0;
-    width: 33%;
+    width: 50%;
     top: -50px;
     left: -100;
     background-color: rgb(255, 255, 255);
     z-index: -1;
     display: block;
+    height: 100vh;
+  }
+
+  header p {
+    max-width: 70%;
+  }
+  .selected-work p {
+    max-width: 46%;
+    margin-bottom: 35px;
+    text-align: center;
+    color: #737373;
+  }
+
+  .nav-linje {
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 50%;
   }
 
   #toggle-nav-btn-open {
@@ -407,18 +438,22 @@ address {
     margin: 21px 0px 0px 0px;
   }
   nav li:first-child {
-    margin-top: 20px;
+    margin-top: 41px;
     font-size: 30px;
+    margin-bottom: 10px;
   }
   nav li a {
     padding: 12px 19px;
-    background-color: #dddddd;
-    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
-    border-radius: 3px;
+    border: 1.5px solid black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
-  #toggle-nav:checked ~ #nav-ul {
+  #toggle-nav:checked ~ .nav-ul {
     opacity: 1;
     left: 0%;
+  }
+
+  nav li:nth-child(8) {
+    margin-top: 30vh;
   }
 
   .feature-name article {
@@ -486,12 +521,32 @@ address {
 }
 
 @media screen and (max-width: 600px) {
-  #nav-ul {
+  .nav-ul {
     width: 100%;
+    height: 75vh;
+  }
+  nav li:nth-child(8) {
+    margin-top: 5vh;
+  }
+  .nav-linje {
+    width: 30%;
+  }
+  .selected-work p {
+    max-width: 62%;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .nav-ul {
+    width: 100%;
+    height: 95vh;
+  }
+  nav li:nth-child(8) {
+    margin-top: 5vh;
+  }
+  .nav-linje {
+    width: 30%;
+  }
   .footer-left {
     max-width: 100%;
   }

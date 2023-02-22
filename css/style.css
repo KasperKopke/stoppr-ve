@@ -401,11 +401,12 @@ address {
     opacity: 0;
     width: 50%;
     top: -50px;
-    left: -100;
+    left: -100%;
     background-color: rgb(255, 255, 255);
     z-index: -1;
     display: block;
     height: 100vh;
+    transition: all 0.2s ease-in-out;
   }
 
   header p {
@@ -564,7 +565,7 @@ address {
     font-size: 21px;
   }
   .latest-news-article {
-    max-width: 65%;
+    max-width: 85%;
   }
   .text-latest {
     max-width: 76%;

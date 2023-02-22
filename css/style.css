@@ -120,6 +120,7 @@ section {
 .selected-work-pic {
   flex-wrap: wrap;
   text-align: center;
+  max-width: 100%;
 }
 .article-wrapper {
   display: flex;

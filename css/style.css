@@ -550,6 +550,9 @@ address {
   .nav-linje {
     width: 30%;
   }
+  .footer-article {
+    padding: 27px;
+  }
   .footer-left {
     max-width: 100%;
   }
@@ -605,5 +608,8 @@ address {
   .selected-work-pic img {
     width: 80%;
     height: auto;
+  }
+  .feature-name article {
+    max-width: 100%;
   }
 }

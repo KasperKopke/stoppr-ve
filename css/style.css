@@ -122,6 +122,8 @@ section {
   text-align: center;
   max-width: 100%;
 }
+.selected-work-pic img {
+}
 .article-wrapper {
   display: flex;
 }
@@ -599,5 +601,9 @@ address {
   }
   header p {
     max-width: 83%;
+  }
+  .selected-work-pic img {
+    width: 80%;
+    height: auto;
   }
 }

@@ -14,7 +14,12 @@
   </head>
   <body>
     <nav>
-      <ul class="nav-ul">
+      <input type="checkbox" id="toggle-nav"/>
+<label for="toggle-nav">
+  <i id="toggle-nav-btn-open" class="fas fa-bars"></i>
+  <i id="toggle-nav-btn-close" class="fas fa-times"></i>
+</label>
+      <ul id="nav-ul">
         <li>Mockup Company</li>
         <li class="nav-li"><a class="nav-a" href="">Home</a></li>
         <li class="nav-li"><a class="nav-a" href="">Product</a></li>
@@ -54,14 +59,14 @@
         <li><a class="" href="">About</a></li>
       </div>
 
-      <div class="selected-work-pic">
+      <section class="selected-work-pic">
         <img src="/assets/gitter.png" alt="" />
         <img src="/assets/gitter.png" alt="" />
         <img src="/assets/bygningnedefra.png" alt="" />
         <img src="/assets/bygningnedefra.png" alt="" />
         <img src="/assets/hvidbygning.png" alt="" />
         <img src="/assets/skyggeafmand.png" alt="" />
-      </div>
+      </section>
     </section>
 
     <section class="feature-name">
@@ -312,7 +317,7 @@
               <label for="mail">
               <input type="email" name="mail" id="mail" placeholder="Email Address"/>
               <br>
-              <textarea name="" id="" cols="30" rows="5"></textarea>
+              <textarea name="" id="textarea" cols="30" rows="5"></textarea>
              
               <button type="submit">Send</button>
             </form>
@@ -320,6 +325,8 @@
         </div>
       </div>
     </footer>
+
+
 
     <address>
     <ul class="address-ul">

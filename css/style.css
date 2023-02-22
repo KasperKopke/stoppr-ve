@@ -12,7 +12,7 @@ nav {
   width: 100%;
   position: fixed;
 }
-.nav-ul {
+#nav-ul {
   display: flex;
   flex: 1;
   gap: 25px;
@@ -119,6 +119,7 @@ section {
 }
 .selected-work-pic {
   flex-wrap: wrap;
+  text-align: center;
 }
 .article-wrapper {
   display: flex;
@@ -221,7 +222,7 @@ section {
   border-radius: 5px;
 }
 hr {
-  min-width: 270px;
+  width: 80%;
 }
 .latest-news-article p {
   max-width: 75%;
@@ -281,7 +282,6 @@ footer {
   margin-bottom: 20px;
   max-width: 40%;
 }
-
 .footer-left ul {
   display: flex;
   gap: 10px;
@@ -295,7 +295,6 @@ footer {
   color: orange;
   font-size: 30px;
 }
-
 .footer-right {
   max-width: 50%;
   display: flex;
@@ -319,7 +318,7 @@ form {
   text-align: start;
 }
 button {
-  width: 87%;
+  min-width: 87%;
   min-height: 35px;
   background-color: black;
   border-radius: 3px;
@@ -358,9 +357,191 @@ address a {
 address li:first-child {
   margin-right: auto;
 }
-
 address {
   padding: 20px 60px;
   background-color: black;
   color: white;
+}
+
+#toggle-nav,
+#toggle-nav-btn-open,
+#toggle-nav-btn-close {
+  display: none;
+}
+
+#toggle-nav-btn-open,
+#toggle-nav-btn-close {
+  font-size: 3rem;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #nav-ul {
+    text-align: center;
+    position: absolute;
+    border-radius: 0px 0px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    opacity: 0;
+    width: 33%;
+    top: -50px;
+    left: -100;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    display: block;
+  }
+
+  #toggle-nav-btn-open {
+    display: inline-block;
+  }
+
+  #toggle-nav:checked ~ label #toggle-nav-btn-open {
+    display: none;
+  }
+
+  #toggle-nav:checked ~ label #toggle-nav-btn-close {
+    display: inline-block;
+  }
+
+  .nav-li {
+    padding: 0px 0px 23px 0px;
+    margin: 21px 0px 0px 0px;
+  }
+  nav li:first-child {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  nav li a {
+    padding: 12px 19px;
+    background-color: #dddddd;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    border-radius: 3px;
+  }
+  #toggle-nav:checked ~ #nav-ul {
+    opacity: 1;
+    left: 0%;
+  }
+
+  .feature-name article {
+    max-width: 44%;
+  }
+  .feature-name {
+    gap: 15px;
+  }
+  .numbers {
+    gap: 15px;
+  }
+  .numbers p {
+    font-size: 29px;
+  }
+  .billede-text h2 {
+    max-width: 75%;
+  }
+  .our-team p {
+    max-width: 75%;
+  }
+  .text-latest {
+    max-width: 50%;
+  }
+  .latest-news-article {
+    max-width: 30%;
+  }
+  .latest-news-article p {
+    margin-bottom: 8%;
+    font-size: 15px;
+  }
+  .footer-left p {
+    max-width: 100%;
+  }
+  .footer-wrapper {
+    flex-direction: column-reverse;
+  }
+  .footer-article {
+    padding: 23px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  input {
+    max-width: 135px;
+  }
+  button {
+    min-width: 89%;
+  }
+  form {
+    text-align: start;
+  }
+  .footer-article {
+    padding: 47px;
+  }
+  .footer-right {
+    max-width: 100%;
+  }
+  .footer-article h3 {
+    font-size: 27px;
+  }
+  .footer-article p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #nav-ul {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer-left {
+    max-width: 100%;
+  }
+  .articles-wrapper-latest {
+    flex-direction: column;
+  }
+  .latest-news-article p {
+    margin-bottom: 30%;
+    font-size: 21px;
+  }
+  .latest-news-article {
+    max-width: 65%;
+  }
+  .text-latest {
+    max-width: 76%;
+  }
+  .selected-work-pic {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .numbers {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .billede-text h2 {
+    font-size: 23px;
+  }
+  .feature-name {
+    gap: 1px;
+  }
+  .article-text-feature-name p {
+    max-width: 100%;
+    font-size: 15px;
+  }
+  footer {
+    background-color: #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 57px;
+  }
+  button {
+    min-width: 100%;
+  }
+  textarea {
+    width: 20.5em;
+  }
+  header p {
+    max-width: 83%;
+  }
 }
